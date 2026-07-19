@@ -1,0 +1,13 @@
+{
+  "name": "naveen-kumar-portfolio",
+  "version": "1.0.0",
+  "description": "Premium, modern personal portfolio for a final-year CS Engineering student.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9"
+  }
+}

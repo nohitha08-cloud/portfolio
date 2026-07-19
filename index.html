@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nohitha Gangireddy | Computer Science Engineering Student Portfolio</title>
+  <meta name="description" content="Professional portfolio of Nohitha Gangireddy, Computer Science Engineering student specializing in Web Design, ReactJs, and Cyber Security.">
+  <meta name="keywords" content="Computer Science, Nohitha Gangireddy, Portfolio, ReactJs, JavaScript, Web Design, KL University">
+  <meta name="author" content="Nohitha Gangireddy">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/profile.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="logo-spinner">NG</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+      <span class="loading-text">Preparing portfolio...</span>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div id="scrollProgress" class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" id="navLogo">
+        <span class="logo-accent">N</span>G
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#certifications" class="nav-link">Certificates</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#internship" class="nav-link">Internship</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#resume-sec" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link contact-btn-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <!-- Animated background elements -->
+    <div class="hero-bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    
+    <div class="container hero-container">
+      <div class="hero-content fade-in-up">
+        <span class="greeting">Hello, I'm</span>
+        <h1 class="animated-name">Nohitha Gangireddy</h1>
+        <div class="typewriter-container">
+          <span class="typewriter-prefix">A Passionate </span>
+          <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-intro">
+          Computer Science Engineering student at KL University. Specializing in modern front-end web development, designing interactive ReactJs applications, and building structured database architectures.
+        </p>
+        <div class="hero-actions">
+          <a href="assets/documents/resume.pdf" class="btn btn-primary" download="Nohitha_Gangireddy_Resume.pdf" id="btnHeroDownload">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+          <a href="#projects" class="btn btn-secondary" id="btnHeroProjects">View Projects</a>
+          <a href="#contact" class="btn btn-accent" id="btnHeroContact">Contact Me</a>
+        </div>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/nohitha08" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:nohitha08@gmail.com" aria-label="Email" class="social-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-container fade-in-up delay-200">
+        <div class="hero-image-wrapper">
+          <img src="assets/images/profile.jpg" alt="Nohitha Gangireddy" class="hero-profile-img">
+          <div class="glow-border"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">Get to Know Me</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <h3>Career Objective</h3>
+          <p>
+            Highly motivated Computer Science Engineering student seeking opportunities to leverage my software design skills in ReactJs, JavaScript, and MySQL. Eager to contribute to a collaborative development team while expanding my expertise in web applications, user experience design, and cybersecurity protocols.
+          </p>
+          <h3 class="mt-4">My Passion</h3>
+          <p>
+            My interest lies in front-end design, web development, and cyber security. I am passionate about crafting smooth interfaces, organizing workflows (like my student submission system), and solving coding challenges. I possess strong problem-solving skills, high self-learning adaptability, and an enthusiasm for translating designs into functional web platforms.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card reveal delay-100">
+            <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card reveal delay-200">
+            <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card reveal delay-300">
+            <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="stat-label-container">
+              <span class="stat-number" data-target="1">0</span><span class="stat-suffix"> Month</span>
+            </div>
+            <div class="stat-label">Social Internship</div>
+          </div>
+          <div class="stat-card reveal delay-400">
+            <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="stat-number" data-target="8">0</div>
+            <div class="stat-label">Technologies Learned</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section bg-light">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">My Capabilities</span>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skills-category-card reveal">
+          <h3 class="category-title"><i class="fa-solid fa-terminal"></i> Languages & Layouts</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>JavaScript</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>HTML5 / CSS3</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>C Language</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Libraries & Frameworks -->
+        <div class="skills-category-card reveal delay-100">
+          <h3 class="category-title"><i class="fa-solid fa-globe"></i> Frameworks & Libraries</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>ReactJs</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Nodejs Basics</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases & Cloud -->
+        <div class="skills-category-card reveal delay-200">
+          <h3 class="category-title"><i class="fa-solid fa-server"></i> Cloud & Databases</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>MySQL (Relational Database)</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Areas of Interest -->
+        <div class="skills-category-card reveal delay-300">
+          <h3 class="category-title"><i class="fa-solid fa-shield-halved"></i> Areas of Interest</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Web Design & Development</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Cyber Security Basics</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer Tools -->
+        <div class="skills-category-card reveal delay-400">
+          <h3 class="category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Developer Tools</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>VS Code</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Git & GitHub</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Timeline Section -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">Academic Background</span>
+        <h2 class="section-title">Education</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="timeline">
+        <!-- B.Tech -->
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024 - 2028</span>
+            <h3>Bachelor of Technology - CSE</h3>
+            <h4 class="timeline-institution">KL University, Vadeswaram</h4>
+            <div class="timeline-grade">CGPA: 8.07 / 10.00</div>
+            <p>
+              Enrolled in Computer Science and Engineering. Solid academic record with course coverage in Data Structures & Algorithms, Operating Systems, Object-Oriented Programming, and Database Management Systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Schooling Placeholder -->
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022 - 2024</span>
+            <h3>Senior Secondary School (Class XII)</h3>
+            <h4 class="timeline-institution">Board of Intermediate Education</h4>
+            <div class="timeline-grade">First Class with Distinction</div>
+            <p>
+              Completed pre-university education in science stream focusing on Mathematics, Physics, and Chemistry. Established rigorous analytical habits and scientific problem-solving logic.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section certifications-section bg-light">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">Verified Badges</span>
+        <h2 class="section-title">Certifications</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="certifications-grid">
+        <!-- Javascript -->
+        <div class="cert-card reveal">
+          <div class="cert-image-container">
+            <img src="assets/images/cert_google.jpg" alt="JavaScript Certification" class="cert-img">
+            <div class="cert-overlay">
+              <span class="btn btn-small btn-primary">Verified (1 Nov 2025)</span>
+            </div>
+          </div>
+          <div class="cert-details">
+            <span class="cert-issuer">JavaScript Certification</span>
+            <h3 class="cert-title">Successfully completed JavaScript Development Course</h3>
+            <span class="cert-date">Issued: 1 Nov 2025</span>
+          </div>
+        </div>
+
+        <!-- META -->
+        <div class="cert-card reveal delay-100">
+          <div class="cert-image-container">
+            <img src="assets/images/cert_aws.jpg" alt="META Certification" class="cert-img">
+            <div class="cert-overlay">
+              <span class="btn btn-small btn-primary">Verified (15 Oct 2023)</span>
+            </div>
+          </div>
+          <div class="cert-details">
+            <span class="cert-issuer">META Certification</span>
+            <h3 class="cert-title">Successfully completed React Basics Course</h3>
+            <span class="cert-date">Issued: 15 Oct 2023</span>
+          </div>
+        </div>
+
+        <!-- Social Internship Certificate -->
+        <div class="cert-card reveal delay-200">
+          <div class="cert-image-container">
+            <img src="assets/images/cert_internship.jpg" alt="Internship Completion Certificate" class="cert-img">
+            <div class="cert-overlay">
+              <span class="btn btn-small btn-primary">Verified (July 2025)</span>
+            </div>
+          </div>
+          <div class="cert-details">
+            <span class="cert-issuer">KL University, SAC</span>
+            <h3 class="cert-title">Social Internship Certificate</h3>
+            <span class="cert-date">Issued: July 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">Portfolio Showpieces</span>
+        <h2 class="section-title">Personal Projects</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Web Based Student Assignment Submission Dashboard -->
+        <div class="project-flip-card reveal">
+          <div class="project-card-inner">
+            <!-- Front Side -->
+            <div class="project-card-front">
+              <div class="project-img-wrapper">
+                <img src="assets/images/project_hotel.jpg" alt="Assignment Submission Dashboard" class="project-img">
+              </div>
+              <div class="project-info-front">
+                <span class="project-category">Web Development & React</span>
+                <h3 class="project-title">Student Assignment Submission Dashboard</h3>
+                <div class="tech-tags">
+                  <span class="tag">ReactJs</span>
+                  <span class="tag">Nodejs</span>
+                  <span class="tag">HTML+CSS</span>
+                  <span class="tag">MySQL</span>
+                </div>
+                <span class="flip-hint"><i class="fa-solid fa-arrows-rotate"></i> Hover to Flip</span>
+              </div>
+            </div>
+            <!-- Back Side -->
+            <div class="project-card-back">
+              <h3 class="project-title">Assignment Submission Dashboard</h3>
+              <p class="project-desc">
+                A smart student assignment platform built to manage assignments, track submission progress, and stay organized.
+              </p>
+              <div class="project-features">
+                <h4>Core Features:</h4>
+                <ul>
+                  <li><i class="fa-solid fa-check text-accent"></i> Overview of total, pending, and completed tasks</li>
+                  <li><i class="fa-solid fa-check text-accent"></i> Easy access portal to recent submissions</li>
+                  <li><i class="fa-solid fa-check text-accent"></i> Performance tracking with grades progress insights</li>
+                </ul>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/nohitha08" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-primary">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <span class="btn btn-small btn-accent">
+                  <i class="fa-solid fa-calendar-days"></i> Completed: Nov 2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic GIS project -->
+        <div class="project-flip-card reveal delay-100">
+          <div class="project-card-inner">
+            <!-- Front Side -->
+            <div class="project-card-front">
+              <div class="project-img-wrapper">
+                <img src="assets/images/project_borewell.jpg" alt="GIS AI detection" class="project-img">
+              </div>
+              <div class="project-info-front">
+                <span class="project-category">UI / Academic design</span>
+                <h3 class="project-title">Interactive Field Mapping UI</h3>
+                <div class="tech-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">CSS Grid</span>
+                  <span class="tag">Google Maps API</span>
+                </div>
+                <span class="flip-hint"><i class="fa-solid fa-arrows-rotate"></i> Hover to Flip</span>
+              </div>
+            </div>
+            <!-- Back Side -->
+            <div class="project-card-back">
+              <h3 class="project-title">Interactive Field Mapping UI</h3>
+              <p class="project-desc">
+                A prototype spatial user interface designed for tracking agricultural coordinates and rendering polygon maps representing farmland landmarks.
+              </p>
+              <div class="project-features">
+                <h4>Core Features:</h4>
+                <ul>
+                  <li><i class="fa-solid fa-check text-accent"></i> Live marker positioning and geo-fencing</li>
+                  <li><i class="fa-solid fa-check text-accent"></i> Custom dashboard analytics charts</li>
+                  <li><i class="fa-solid fa-check text-accent"></i> Responsive map search controls</li>
+                </ul>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/nohitha08" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-primary">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Positions of Responsibility Section -->
+  <section id="internship" class="section internship-section bg-light">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">Leadership & Responsibilities</span>
+        <h2 class="section-title">Positions of Responsibility</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="internship-container reveal">
+        <div class="internship-badge">
+          <i class="fa-solid fa-people-carry-box"></i>
+        </div>
+        <div class="internship-content">
+          <div class="internship-header">
+            <div>
+              <h3 class="internship-role">Social Intern</h3>
+              <h4 class="internship-company">KL University, SAC</h4>
+            </div>
+            <span class="internship-duration">July 2025</span>
+          </div>
+          
+          <div class="internship-body">
+            <p class="internship-desc">
+              Contributed to community health and wellness activities, organizing and managing events within the Student Activities Council (SAC) framework.
+            </p>
+            
+            <div class="internship-highlights">
+              <div class="highlight-item">
+                <h5><i class="fa-solid fa-dumbbell text-primary"></i> Program Implementation</h5>
+                <p>Helped in organizing and implementing physical fitness exercises and events for student participants.</p>
+              </div>
+              <div class="highlight-item mt-3">
+                <h5><i class="fa-solid fa-comments text-accent"></i> Data Collection & Feedback</h5>
+                <p>Collected and structured qualitative event feedback from the participants to improve future community programs.</p>
+              </div>
+            </div>
+
+            <div class="internship-tags">
+              <span class="tech-label">Competencies:</span>
+              <span class="tag">Event Management</span>
+              <span class="tag">Data Collection</span>
+              <span class="tag">Feedback Analysis</span>
+              <span class="tag">Community Engagement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section achievements-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">Highlights & Milestones</span>
+        <h2 class="section-title">Achievements</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="achievements-grid">
+        <!-- Javascript Cert -->
+        <div class="achievement-card reveal">
+          <div class="achievement-icon-wrapper">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <h3>JavaScript Certified</h3>
+          <span class="achievement-badge">Certification</span>
+          <p>Successfully completed advanced JavaScript coding and logic structures training (1 Nov 2025).</p>
+        </div>
+
+        <!-- React basics -->
+        <div class="achievement-card reveal delay-100">
+          <div class="achievement-icon-wrapper">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <h3>META Certified React Developer</h3>
+          <span class="achievement-badge">React Basics</span>
+          <p>Successfully completed the Meta React Basics course, covering hooks, states, and components (15 Oct 2023).</p>
+        </div>
+
+        <!-- Social Intern -->
+        <div class="achievement-card reveal delay-200">
+          <div class="achievement-icon-wrapper">
+            <i class="fa-solid fa-hands-holding-child"></i>
+          </div>
+          <h3>KL University Social Internship</h3>
+          <span class="achievement-badge">Community Service</span>
+          <p>Successfully completed one-month community wellness leadership and feedback analysis internship in July 2025.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume-sec" class="section resume-section bg-light">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">Credentials Summary</span>
+        <h2 class="section-title">Resume</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="resume-preview-container reveal">
+        <div class="resume-preview-card">
+          <div class="resume-decor-header"></div>
+          <div class="resume-content-wrapper">
+            <div class="resume-inner-header">
+              <div>
+                <h2>Nohitha Gangireddy</h2>
+                <p>Computer Science Engineering Student | KL University</p>
+              </div>
+              <div class="resume-inner-contact">
+                <p><i class="fa-solid fa-envelope"></i> nohitha08@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 83415 61155</p>
+                <p><i class="fa-solid fa-location-dot"></i> Guntur, AP, India</p>
+              </div>
+            </div>
+            
+            <div class="resume-inner-grid">
+              <div class="resume-inner-left">
+                <div class="resume-inner-section">
+                  <h3>Education</h3>
+                  <h4>B.Tech in CSE</h4>
+                  <p class="resume-sub">CGPA: 8.07 | 2024 - 2028</p>
+                  <p>KL University, Vadeswaram</p>
+                </div>
+                <div class="resume-inner-section">
+                  <h3>Core Skills</h3>
+                  <div class="resume-skill-bubbles">
+                    <span>JavaScript</span>
+                    <span>C</span>
+                    <span>HTML+CSS</span>
+                    <span>ReactJs</span>
+                    <span>Nodejs</span>
+                    <span>MySQL</span>
+                    <span>VS Code</span>
+                    <span>Git / GitHub</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="resume-inner-right">
+                <div class="resume-inner-section">
+                  <h3>Featured Projects</h3>
+                  <h4>Student Assignment Submission Dashboard</h4>
+                  <p class="resume-sub">ReactJs, Nodejs & MySQL application</p>
+                  <p>A smart platform to manage assignments, track submission progress, and stay organized.</p>
+                </div>
+                <div class="resume-inner-section">
+                  <h3>Responsibility</h3>
+                  <h4>Social Internship</h4>
+                  <p class="resume-sub">KL University, SAC | July 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-actions-group">
+          <a href="assets/documents/resume.pdf" target="_blank" class="btn btn-secondary" id="btnResumeView">
+            <i class="fa-solid fa-eye"></i> View Full Resume
+          </a>
+          <a href="assets/documents/resume.pdf" class="btn btn-primary" download="Nohitha_Gangireddy_Resume.pdf" id="btnResumeDownload">
+            <i class="fa-solid fa-download"></i> Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-subtitle">Let's Connect</span>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info-panel reveal">
+          <h3>Get In Touch</h3>
+          <p>Feel free to reach out for project collaboration, assignment management templates, front-end inquiries, or tech talks. I am always open to connecting!</p>
+          
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-detail-text">
+                <h4>Email</h4>
+                <a href="mailto:nohitha08@gmail.com">nohitha08@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-detail-text">
+                <h4>Phone</h4>
+                <a href="tel:+918341561155">+91 83415 61155</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-detail-text">
+                <h4>Location</h4>
+                <p>KL University Campus, Vadeswaram, AP, India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maps Placeholder (Centered on KL University Vadeswaram) -->
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.6669931818274!2d80.620245674844!3d16.441772684294065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f0a2a7d81943%3A0x8ba67d934bbaf4ef!2sK%20L%20University!5e0!3m2!1sen!2sin!4v1692120000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="200" 
+              style="border:0; border-radius:12px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Google Maps View of KL University, Vadeswaram">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-panel reveal delay-100">
+          <h3>Send a Message</h3>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="formName">Full Name</label>
+              <input type="text" id="formName" name="name" class="form-control" placeholder="John Doe" required>
+              <span class="error-message" id="nameError">Name is required.</span>
+            </div>
+            <div class="form-group">
+              <label for="formEmail">Email Address</label>
+              <input type="email" id="formEmail" name="email" class="form-control" placeholder="john@example.com" required>
+              <span class="error-message" id="emailError">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+              <label for="formSubject">Subject</label>
+              <input type="text" id="formSubject" name="subject" class="form-control" placeholder="Collaboration / Project Inquiry" required>
+              <span class="error-message" id="subjectError">Subject is required.</span>
+            </div>
+            <div class="form-group">
+              <label for="formMessage">Message</label>
+              <textarea id="formMessage" name="message" rows="5" class="form-control" placeholder="Your message here..." required></textarea>
+              <span class="error-message" id="messageError">Message cannot be empty.</span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="btnSubmitForm">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <div id="formSuccessAlert" class="alert alert-success hide">
+            <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-accent">N</span>G
+        </a>
+        <p>Creating functional front-end applications, interactive designs, and reliable databases.</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/nohitha08" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:nohitha08@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certificates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>More Links</h3>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#internship">Internship</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#resume-sec">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 Nohitha Gangireddy. All rights reserved. Designed with ❤️ in India.</p>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
