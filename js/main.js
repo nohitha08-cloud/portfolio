@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 4. Typewriter Animation ---
   const typewriterText = document.getElementById('typewriter');
-  const words = ["Computer Science Student", "Web Developer", "ReactJs Developer", "Cyber Security Learner"];
+  const words = ["Computer Science Student"];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -121,9 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Determine state changes
     if (!isDeleting && charIndex === currentWord.length) {
-      // Pause at full word
-      typingSpeed = 2000;
-      isDeleting = true;
+      if (words.length > 1) {
+        // Pause at full word
+        typingSpeed = 2000;
+        isDeleting = true;
+      } else {
+        // Single word mode: keep word displayed and stop typing loop
+        return;
+      }
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       // Cycle to next word
