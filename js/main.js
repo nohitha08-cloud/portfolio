@@ -332,29 +332,57 @@ document.addEventListener('DOMContentLoaded', () => {
           })
         };
 
-        // Mock API submission trigger
+        // API Email Submission + Local Inbox Update
         const submitBtn = document.getElementById('btnSubmitForm');
         submitBtn.disabled = true;
         submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-circle-notch fa-spin"></i>';
 
-        setTimeout(() => {
-          // Save message to localStorage inbox
+        fetch("https://formsubmit.co/ajax/nohitha08@gmail.com", {
+          method: "POST",
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: newMsg.name,
+            email: newMsg.email,
+            subject: newMsg.subject,
+            message: newMsg.message,
+            _subject: `Portfolio Inquiry from ${newMsg.name}: ${newMsg.subject}`
+          })
+        })
+        .then(() => {
+          // Save to local portfolio inbox
           const stored = getStoredMessages();
           stored.unshift(newMsg);
           saveMessages(stored);
           renderMessages();
 
-          // Success Response
           contactForm.reset();
           successAlert.classList.remove('hide');
           submitBtn.disabled = false;
           submitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
 
-          // Hide success alert after 5 seconds
           setTimeout(() => {
             successAlert.classList.add('hide');
           }, 5000);
-        }, 1200);
+        })
+        .catch(() => {
+          // Graceful fallback to local portfolio inbox if offline
+          const stored = getStoredMessages();
+          stored.unshift(newMsg);
+          saveMessages(stored);
+          renderMessages();
+
+          contactForm.reset();
+          successAlert.classList.remove('hide');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
+
+          setTimeout(() => {
+            successAlert.classList.add('hide');
+          }, 5000);
+        });
       }
     });
     
