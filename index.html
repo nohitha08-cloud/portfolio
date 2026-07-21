@@ -863,6 +863,23 @@
           </div>
         </div>
       </div>
+
+      <!-- Received Messages Inbox Section -->
+      <div class="received-messages-wrapper reveal">
+        <div class="inbox-header">
+          <div class="inbox-title">
+            <h3><i class="fa-solid fa-inbox text-primary"></i> Received Messages (<span id="messageCount">0</span>)</h3>
+            <p>Messages submitted by visitors from any email are recorded and displayed here in real-time.</p>
+          </div>
+          <button id="btnClearAllMessages" class="btn btn-small btn-secondary hide">
+            <i class="fa-solid fa-trash-can"></i> Clear All Messages
+          </button>
+        </div>
+
+        <div id="messagesList" class="messages-list">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
     </div>
   </section>
 

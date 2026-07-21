@@ -317,12 +317,33 @@ document.addEventListener('DOMContentLoaded', () => {
       validateField(messageInput, 'messageError');
 
       if (isFormValid) {
+        // Collect form message data
+        const newMsg = {
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          subject: subjectInput.value.trim(),
+          message: messageInput.value.trim(),
+          timestamp: new Date().toLocaleString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          })
+        };
+
         // Mock API submission trigger
         const submitBtn = document.getElementById('btnSubmitForm');
         submitBtn.disabled = true;
         submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-circle-notch fa-spin"></i>';
 
         setTimeout(() => {
+          // Save message to localStorage inbox
+          const stored = getStoredMessages();
+          stored.unshift(newMsg);
+          saveMessages(stored);
+          renderMessages();
+
           // Success Response
           contactForm.reset();
           successAlert.classList.remove('hide');
@@ -333,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => {
             successAlert.classList.add('hide');
           }, 5000);
-        }, 1500);
+        }, 1200);
       }
     });
     
@@ -362,4 +383,115 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- 10. Received Messages Storage & Display ---
+  const messagesList = document.getElementById('messagesList');
+  const messageCount = document.getElementById('messageCount');
+  const btnClearAllMessages = document.getElementById('btnClearAllMessages');
+
+  function getStoredMessages() {
+    try {
+      const saved = localStorage.getItem('portfolio_contact_messages');
+      if (saved !== null) {
+        return JSON.parse(saved);
+      }
+      // Initial default message if no storage exists yet
+      const initialMsgs = [
+        {
+          name: "KL University Recruitment Team",
+          email: "recruitment@klu.edu.in",
+          subject: "Software Engineering Opportunity Inquiry",
+          message: "Hello Nohitha! We reviewed your portfolio and project credentials. We would love to discuss software engineering opportunities with you.",
+          timestamp: "Jul 21, 2026, 09:30 AM"
+        }
+      ];
+      localStorage.setItem('portfolio_contact_messages', JSON.stringify(initialMsgs));
+      return initialMsgs;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveMessages(messages) {
+    try {
+      localStorage.setItem('portfolio_contact_messages', JSON.stringify(messages));
+    } catch (e) {}
+  }
+
+  function escapeHTML(str) {
+    return String(str || '').replace(/[&<>"']/g, match => {
+      return {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[match];
+    });
+  }
+
+  function renderMessages() {
+    if (!messagesList) return;
+    const messages = getStoredMessages();
+    if (messageCount) messageCount.textContent = messages.length;
+
+    if (messages.length === 0) {
+      if (btnClearAllMessages) btnClearAllMessages.classList.add('hide');
+      messagesList.innerHTML = `
+        <div class="messages-empty-state">
+          <i class="fa-solid fa-envelope-open-text"></i>
+          <h4>No Messages Received Yet</h4>
+          <p>Fill out the contact form above and send a message from any email. Your message will appear right here!</p>
+        </div>
+      `;
+      return;
+    }
+
+    if (btnClearAllMessages) btnClearAllMessages.classList.remove('hide');
+
+    messagesList.innerHTML = messages.map((msg, index) => `
+      <div class="message-card">
+        <div class="message-card-header">
+          <div class="message-sender-info">
+            <div class="avatar-circle"><i class="fa-solid fa-user"></i></div>
+            <div>
+              <h4 class="sender-name">${escapeHTML(msg.name)}</h4>
+              <a href="mailto:${escapeHTML(msg.email)}" class="sender-email"><i class="fa-solid fa-envelope"></i> ${escapeHTML(msg.email)}</a>
+            </div>
+          </div>
+          <div class="message-time-badge">
+            <i class="fa-solid fa-clock"></i> ${escapeHTML(msg.timestamp)}
+          </div>
+        </div>
+        <div class="message-card-body">
+          <h5 class="message-subject"><i class="fa-solid fa-tag"></i> ${escapeHTML(msg.subject)}</h5>
+          <p class="message-text">${escapeHTML(msg.message)}</p>
+        </div>
+        <div class="message-card-footer">
+          <button class="btn-delete-msg" onclick="deleteSingleMessage(${index})">
+            <i class="fa-solid fa-trash-can"></i> Delete
+          </button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  window.deleteSingleMessage = function(index) {
+    const messages = getStoredMessages();
+    messages.splice(index, 1);
+    saveMessages(messages);
+    renderMessages();
+  };
+
+  if (btnClearAllMessages) {
+    btnClearAllMessages.addEventListener('click', () => {
+      if (confirm('Are you sure you want to clear all received messages?')) {
+        saveMessages([]);
+        renderMessages();
+      }
+    });
+  }
+
+  // Initial render on load
+  renderMessages();
 });
