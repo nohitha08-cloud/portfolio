@@ -22,7 +22,7 @@ This repository features a modern, responsive single-page web application built 
 
 * **Name**: Nohitha Gangireddy
 * **Role**: Computer Science Engineering Student | KL University
-* **Location**: Devapuram 3rd Lane, Guntur, AP, India
+* **Location**: Guntur, Andhra Pradesh
 * **Email**: nohitha08@gmail.com
 * **Phone**: +91 83415 61155
 * **GitHub**: [https://github.com/nohitha08](https://github.com/nohitha08)
